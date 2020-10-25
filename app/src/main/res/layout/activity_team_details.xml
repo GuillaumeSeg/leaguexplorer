@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/banner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:src="@drawable/baner_nhl"
+        android:adjustViewBounds="true" />
+    <TextView
+        android:id="@+id/country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textSize="16sp"
+        tools:text="U.S.A." />
+    <TextView
+        android:id="@+id/league"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="NHL" />
+    <TextView
+        android:id="@+id/website"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        tools:text="https://psg.fr"/>
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="The Arizona Coyotes are a professional ice hockey team based in the Phoenix suburb of Glendale, Arizona. They compete in the National Hockey League's (NHL) Pacific Division of the Western Conference.
+
+Since December 2003, the Coyotes have played their home games at Gila River Arena after having spent the previous 7½ seasons at America West Arena (now Talking Stick Resort Arena) in downtown Phoenix.
+
+The Coyotes were founded on December 27, 1971 as the original Winnipeg Jets of the World Hockey Association (WHA). After the WHA had ceased operations, they were one of four original franchises absorbed into the National Hockey League and then officially granted membership on June 22, 1979. The Jets moved to Phoenix on July 1, 1996 and were renamed as the Phoenix Coyotes.
+
+The NHL took over ownership of the Phoenix Coyotes franchise in 2009 after previous owner Jerry Moyes (who had incurred massive financial losses since his purchase of the team in 2005) turned it over to the league after declaring bankruptcy. Prior to that, Moyes had previously attempted to privately sell the team to Canadian billionaire Jim Balsillie, who wanted to relocate the team to Hamilton, Ontario, but the NHL protested that the attempted sale was a violation of league policy and a court agreed. During the next 4 years, the league vehemently resisted selling the team to interests that would have moved the team out of the Phoenix area, and on July 3, 2013, reached an agreement that will keep the team in Glendale for the near future. The sale to IceArizona Acquisition Co., LLC. was completed on August 5, 2013.
+
+On June 27, 2014, the team changed its franchise name to the Arizona Coyotes and modified its secondary logo."/>
+    </ScrollView>
+
+</LinearLayout>

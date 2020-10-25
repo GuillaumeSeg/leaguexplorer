@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LeagueXplorer</string>
+    <string name="hint_search">Search by league</string>
+    <string name="team_missing">Team data missing !</string>
+    <string name="no_result">There are no results to show</string>
+    <string name="no_connection_error">no internet connection, please try again later.</string>
+</resources>
