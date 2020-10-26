@@ -12,12 +12,17 @@ J'utilise Glide pour loader les images reçues du serveur dans l'app. et aussi l
 Pour les layouts, j'utilise les ConstraintLayouts pour le Splashscreen, un relativeLayout pour la Home, et un LinearLayout pour la page de détails équipe.
 J'utilise les coroutines pour les requetes serveurs, ainsi que Retrofit et Moshi pour le parsing JSON.
 Pour la partie tests, j'ai utilisé Junit et Mockk.
+Un des points de l'exercice était de ne pas utiliser Rx, cela m'a posé problème au début car je l'utilise quasiment sur tous mes projets.
 
 ## API
 Pour requeter les données sportives des ligues et équipe, j'ai utilisé l'api https://www.thesportsdb.com, avec Retrofit et Moshi pour parser.
 
 ## Architecture
 L'architecture choisi pour le projet est MVP (Model View Presenter)
+
+## Gestion erreurs
+Quand l'utilisateur a un soucis de connexion, les requêtes ne passent pas et il est averti par un message Toast, que sa connexion pose problème, qu'il doit réessayer plus tard.
+Pareil si les resultats des équipes sont completement vide, l'utilisateur est averti par un Toast qu'il n'y a aucun résultat pour sa requête (je me suis aperçu que pour certaines ligues, il n'y avait pas de résultats d'équipe reçu.)
 
 ## Feedbacks
 J'ai pris beaucoup de plaisir à développer ce projet autant sur le plan UI design que sur l'aspect back et requetes serveurs, je pense que je vais continuer à le maintenir et le mettre en avant, peut être mettre l'application en production sur le playstore en faisant une release avec proguard activé.
