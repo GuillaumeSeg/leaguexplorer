@@ -1,8 +1,8 @@
 ## LeagueXplorer
 Football Android application with thesportsdb API 
 
-![Splashscreen](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/Screenshot_1.jpg "Splashscreen")
-![Home Page 1](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/Screenshot_2.jpg "Home Page 1")
-![Home autocompletion](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/Screenshot_3.jpg "Home autocompletion")
-![Home list teams](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/Screenshot_4.jpg "Home list teams")
-![Team details page](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/Screenshot_5.jpg "Team details page")
+![Splashscreen|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_1.png "Splashscreen")
+![Home Page 1|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_2.png "Home Page 1")
+![Home autocompletion|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_3.png "Home autocompletion")
+![Home list teams|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_4.png "Home list teams")
+![Team details page|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_5.png "Team details page")
