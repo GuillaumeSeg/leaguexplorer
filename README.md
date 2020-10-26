@@ -23,6 +23,10 @@ L'organisation est fait en Clean Architecture, avec une couche Presentation : un
 une couche Domain : qui contient la logique de l'app pour la récupération des données, ainsi que les différents classes des modèles.
 et la couche Data : qui va avoir la définition des sources de données (ici seulement les données venant des serveurs)
 
+## Tests
+En ce qui concerne les tests, j'ai simplement tester les modules Koin, qu'ils peuvent bien s'executer dans l'app.
+et j'ai testé les repositories Team et League. Par la suite je pourrai ajouter des test sur la présentation et l'affichage des données sur les views.
+
 ## Gestion erreurs
 Quand l'utilisateur a un soucis de connexion, les requêtes ne passent pas et il est averti par un message Toast, que sa connexion pose problème, qu'il doit réessayer plus tard.
 Pareil si les resultats des équipes sont completement vide, l'utilisateur est averti par un Toast qu'il n'y a aucun résultat pour sa requête (je me suis aperçu que pour certaines ligues, il n'y avait pas de résultats d'équipe reçu.)
@@ -31,6 +35,7 @@ Pareil si les resultats des équipes sont completement vide, l'utilisateur est a
 J'ai pris beaucoup de plaisir à développer ce projet autant sur le plan UI design que sur l'aspect back et requêtes serveurs, je pense que je vais continuer à le maintenir et le mettre en avant, peut être mettre l'application en production sur le playstore en faisant une release avec proguard activé.
 J'aimerai aussi récupérer les différents crashs via crashlytics à l'avenir, améliorer les features, ajouter des nouveaux tests.
 
+## Mockups App
 ![Splashscreen|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_1.png "Splashscreen")
 ![Home Page 1|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_2.png "Home Page 1")
 ![Home autocompletion|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_3.png "Home autocompletion")
