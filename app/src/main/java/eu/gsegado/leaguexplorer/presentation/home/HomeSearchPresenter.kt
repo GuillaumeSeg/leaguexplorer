@@ -28,7 +28,7 @@ class HomeSearchPresenter(
             }
 
             override fun onError(errorModel: ErrorModel?) {
-                Log.d(TAG, "error "+ errorModel?.message)
+                Log.d(TAG, "error "+ errorModel?.getErrorMessage())
             }
         })
     }
@@ -41,13 +41,14 @@ class HomeSearchPresenter(
                     Log.i(TAG, "result teams : $result")
                     view?.setAdapterItems(result)
                 } ?: run {
+                    // Sometimes there are no teams associated with a league, so we can display a toast message
                     view?.showInfoNoResult()
                 }
                 view?.hideKeyboard()
             }
 
             override fun onError(errorModel: ErrorModel?) {
-                Log.d(TAG, "error "+ errorModel?.message)
+                Log.d(TAG, "error "+ errorModel?.getErrorMessage())
                 if (errorModel?.errorStatus == ErrorModel.ErrorStatus.NO_CONNECTION) {
                     view?.showInfoNoConnection()
                 }

@@ -17,6 +17,12 @@ import eu.gsegado.leaguexplorer.domain.entities.Team
 import kotlinx.android.synthetic.main.activity_team_details.*
 import org.koin.android.ext.android.inject
 
+/**
+ *
+ * It shows the information of a team like the banner, the name, the country,
+ * the league, the description and website, the user can click on the website text
+ * to be redirected to the team's website in the device browser.
+ */
 class TeamDetailsActivity : AppCompatActivity(), ITeamDetails.View {
 
     private val teamDetailsPresenter: TeamDetailsPresenter by inject()
@@ -36,7 +42,10 @@ class TeamDetailsActivity : AppCompatActivity(), ITeamDetails.View {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
+    // If the data is missing we can simply hide the UI.
+    // Because for instance teams don't have a banner image.
     override fun displayTeamInfo(team: Team) {
+        // banner image
         team.bannerUrl?.let {
             Glide
                 .with(this)
@@ -47,28 +56,33 @@ class TeamDetailsActivity : AppCompatActivity(), ITeamDetails.View {
             banner.visibility = View.GONE
         }
 
+        // team name
         team.name?.let {
             supportActionBar?.title = it
         }
 
+        // country
         team.country?.let {
             country.text = it
         } ?: run {
             country.visibility = View.GONE
         }
 
+        // League
         team.league?.let {
             league.text = it
         } ?: run {
             league.visibility = View.GONE
         }
 
+        // Description
         team.description?.let {
             description.text = it
         } ?: run {
             description.visibility = View.GONE
         }
 
+        // Website
         team.website?.let { websiteSafe ->
             val content = SpannableString(websiteSafe)
             content.setSpan(UnderlineSpan(), 0, websiteSafe.length, 0)

@@ -9,19 +9,23 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
+/**
+ *
+ * Koin modules about the remote services.
+ */
 object NetModule {
 
     val modules = module {
 
         single { createService(get()) }
 
-        single { createRetrofit(get(), BuildConfig.BASE_URL) }
+        single { createRetrofit(get()) }
 
         single { createOkHttpClient() }
 
     }
 
-    fun createOkHttpClient(): OkHttpClient {
+    private fun createOkHttpClient(): OkHttpClient {
         val httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.level = HttpLoggingInterceptor.Level.BASIC
         return OkHttpClient.Builder()
@@ -30,15 +34,15 @@ object NetModule {
             .addInterceptor(httpLoggingInterceptor).build()
     }
 
-    fun createRetrofit(okHttpClient: OkHttpClient, url: String): Retrofit {
+    private fun createRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(url)
+            .baseUrl(BuildConfig.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
     }
 
-    fun createService(retrofit: Retrofit): SportDbService {
+    private fun createService(retrofit: Retrofit): SportDbService {
         return retrofit.create(SportDbService::class.java)
     }
 

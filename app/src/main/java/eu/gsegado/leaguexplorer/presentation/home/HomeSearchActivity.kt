@@ -15,6 +15,12 @@ import eu.gsegado.leaguexplorer.utils.Utils
 import kotlinx.android.synthetic.main.activity_home_search.*
 import org.koin.android.ext.android.inject
 
+/**
+ *
+ * The Home page, the user can search a league in the appbar and then it displays all the teams
+ * in the league, the user can click on a team and then it starts another activity to display the
+ * team details.
+ */
 class HomeSearchActivity : AppCompatActivity(), IHomeSearch.View {
 
     private val homeSearchPresenter: HomeSearchPresenter by inject()
@@ -28,13 +34,10 @@ class HomeSearchActivity : AppCompatActivity(), IHomeSearch.View {
         homeSearchPresenter.attachView(this)
         homeSearchPresenter.initPresenter()
 
-        adapter = TeamsAdapter {
-            homeSearchPresenter.selectTeam(it)
-        }
-        list_teams.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL,false)
-        list_teams.adapter = adapter
+        initTeamAdapter()
     }
 
+    // Create the search interface with autocompletion
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         val menuItem = menu?.findItem(R.id.search)
@@ -93,6 +96,14 @@ class HomeSearchActivity : AppCompatActivity(), IHomeSearch.View {
 
     override fun setAutocompletionList(items: List<String>) {
         adapterAutocompletion?.addAll(items)
+    }
+
+    private fun initTeamAdapter() {
+        adapter = TeamsAdapter {
+            homeSearchPresenter.selectTeam(it)
+        }
+        list_teams.layoutManager = GridLayoutManager(this, 2, RecyclerView.VERTICAL,false)
+        list_teams.adapter = adapter
     }
 
 }

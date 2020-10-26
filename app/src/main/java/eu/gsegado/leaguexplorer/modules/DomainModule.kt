@@ -11,6 +11,9 @@ import eu.gsegado.leaguexplorer.domain.usecase.GetTeamDetailsUseCase
 import eu.gsegado.leaguexplorer.domain.usecase.GetTeamsUseCase
 import org.koin.dsl.module
 
+/**
+ * All relative koin modules of Use case and repositories
+ */
 object DomainModule {
 
     val modules = module {
@@ -26,11 +29,11 @@ object DomainModule {
         single { GetLeaguesUseCase(get(), ApiErrorHandle()) }
     }
 
-    fun createTeamRepository(apiService: SportDbService): TeamRepository {
+    private fun createTeamRepository(apiService: SportDbService): TeamRepository {
         return TeamRepositoryImp(apiService)
     }
 
-    fun createLeagueRepository(apiService: SportDbService): LeagueRepository {
+    private fun createLeagueRepository(apiService: SportDbService): LeagueRepository {
         return LeagueRepositoryImp(apiService)
     }
 }

@@ -4,6 +4,9 @@ import eu.gsegado.leaguexplorer.presentation.details.TeamDetailsPresenter
 import eu.gsegado.leaguexplorer.presentation.home.HomeSearchPresenter
 import org.koin.dsl.module
 
+/**
+ * Presentation modules.
+ */
 object PresenterModule {
 
     val modules = module {

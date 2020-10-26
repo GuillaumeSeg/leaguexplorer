@@ -27,7 +27,7 @@ class TeamDetailsPresenter(private val getTeamDetailsUseCase: GetTeamDetailsUseC
             }
 
             override fun onError(errorModel: ErrorModel?) {
-                Log.d(TAG, "error "+ errorModel?.message)
+                Log.d(TAG, "error "+ errorModel?.getErrorMessage())
             }
 
         })
