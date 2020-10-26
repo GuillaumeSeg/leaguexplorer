@@ -7,6 +7,9 @@ import eu.gsegado.leaguexplorer.R
 import eu.gsegado.leaguexplorer.presentation.home.HomeSearchActivity
 import kotlinx.android.synthetic.main.activity_splashscreen.*
 
+/**
+ * Simple splashscreen with a lottie animation
+ */
 class SplashScreenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
