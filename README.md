@@ -37,6 +37,9 @@ Pareil si les resultats des équipes sont completement vide, l'utilisateur est a
 J'ai pris beaucoup de plaisir à développer ce projet autant sur le plan UI design que sur l'aspect back et requêtes serveurs, je pense que je vais continuer à le maintenir et le mettre en avant, peut être mettre l'application en production sur le playstore en faisant une release avec proguard activé.
 J'aimerai aussi récupérer les différents crashs via crashlytics à l'avenir, améliorer les features, ajouter des nouveaux tests. Par la suite peut-être faire une gestion des langues des textes dans l'app, mais ils ne sont pas tous remplis dans l'API.
 
+## Lien Beta ouverte
+https://play.google.com/store/apps/details?id=eu.gsegado.leaguexplorer
+
 ## Mockups App
 ![Splashscreen|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_1.png "Splashscreen")
 ![Home Page 1|2200x2200,20%](https://github.com/GuillaumeSeg/leaguexplorer/blob/master/documentation/mockup_2.png "Home Page 1")
